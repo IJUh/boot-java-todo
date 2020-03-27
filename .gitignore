@@ -7,6 +7,9 @@ build/
 
 /src/main/generated
 
+.DS_Store
+*/.DS_Store
+
 ### STS ###
 .apt_generated
 .classpath
