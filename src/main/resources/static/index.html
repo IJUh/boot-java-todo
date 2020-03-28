@@ -102,16 +102,22 @@
 
         var previousPage = document.getElementById('previousPage');
         var nextPage = document.getElementById('nextPage');
-        if(currentPage == 0) {
-            previousPage.disabled =  'disabled';
-        } else {
-            previousPage.disabled =  false;
-        }
 
-        if(currentPage+1 == totalPage) {
+        if(currentPage == 0 && totalPage==0) {
+            previousPage.disabled =  'disabled';
             nextPage.disabled =  'disabled';
         } else {
-            nextPage.disabled =  false;
+            if(currentPage == 0) {
+                previousPage.disabled =  'disabled';
+            } else {
+                previousPage.disabled =  false;
+            }
+
+            if(currentPage+1 == totalPage) {
+                nextPage.disabled =  'disabled';
+            } else {
+                nextPage.disabled =  false;
+            }
         }
 
         for(var i=0; i<todoList.length;i++){
