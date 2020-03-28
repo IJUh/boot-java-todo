@@ -12,6 +12,8 @@ Spring Bood Java Project (Todo app)
 
 ## H2 Database console URL
 http://localhost:8080/h2-console
+- url : jdbc:h2:mem:test
+- name : sa
 
 ## Todo 웹 페이지
 http://localhost:8080/index.html
