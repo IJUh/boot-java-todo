@@ -11,6 +11,7 @@ import lombok.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 @Getter
 @Builder
@@ -35,6 +36,7 @@ public class TodoDto {
     private LocalDateTime updatedAt;
 
     public static TodoDto of(Todo entity) {
+
         TodoDtoBuilder builder = builder();
         builder.id(entity.getId())
                 .todo(entity.getTodo())

@@ -23,13 +23,13 @@ public class ScheduleContorller {
     private final ScheduleService service;
 
     @GetMapping(value ="/list")
-    public List<ScheduleVO> getList() {
+    public List<Schedule> getList() {
         return service.get();
     }
 
-    @PostMapping(value = "/oneTodo")
-    public void addTodo(Todo todo) {
-        service.addOneTodo(todo);
+    @PostMapping(value = "/todo")
+    public void addTodo(TodoDto todoDto) {
+        service.addOneTodo(todoDto);
     }
 /*
     @PostMapping

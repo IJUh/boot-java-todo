@@ -12,6 +12,6 @@ public class ScheduleVO {
     private List<Todo> todoList;
 
     public static ScheduleVO of(Todo todo) {
-        return ScheduleVO.builder().todoList(todo.getTodoList()).build();
+        return new ScheduleVO(todo);
     }
 }

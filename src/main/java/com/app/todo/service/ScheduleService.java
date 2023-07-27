@@ -1,5 +1,6 @@
 package com.app.todo.service;
 
+import com.app.todo.dto.TodoDto;
 import com.app.todo.entity.Schedule;
 import com.app.todo.entity.Todo;
 import com.app.todo.repository.ScheduleRepository;
@@ -29,15 +30,15 @@ public class ScheduleService {
         }
     }*/
 
-    public List<ScheduleVO> get() {
-        List<ScheduleVO> voList = new ArrayList<>();
-        for (Todo scheduleEntity:repository.findAll()) {
-            voList.add(ScheduleVO.of(scheduleEntity));
+    public List<Schedule> get() {
+        List<Schedule> voList = new ArrayList<>();
+        for (Schedule schedule:repository.findAll()) {
+            voList.add(schedule);
         }
         return voList;
     }
 
-    public void addOneTodo(Todo todo) {
-        repository.save(todo);
+    public void addOneTodo(TodoDto todoDto) {
+        repository.save(todoDto);
     }
 }
