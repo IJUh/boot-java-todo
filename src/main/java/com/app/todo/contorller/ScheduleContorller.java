@@ -1,17 +1,10 @@
 package com.app.todo.contorller;
 
-import com.app.todo.dto.TodoDto;
 import com.app.todo.entity.Schedule;
-import com.app.todo.entity.Todo;
 import com.app.todo.service.ScheduleService;
-import com.app.todo.service.TodoService;
-import com.app.todo.vo.ScheduleVO;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 
@@ -28,8 +21,8 @@ public class ScheduleContorller {
     }
 
     @PostMapping(value = "/todo")
-    public void addTodo(TodoDto todoDto) {
-        service.addOneTodo(todoDto);
+    public void addTodo(Schedule schedule) {
+        service.addTodo(schedule);
     }
 /*
     @PostMapping
