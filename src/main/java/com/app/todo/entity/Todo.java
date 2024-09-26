@@ -4,6 +4,7 @@ import com.app.todo.dto.TodoDto;
 import lombok.*;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -31,6 +32,10 @@ public class Todo {
 
     @Column(columnDefinition = "timestamp null on update current_timestamp comment '수정일시'")
     private LocalDateTime updatedAt;
+    /*@Column(columnDefinition = "timestamp not null default current_timestamp comment '시작일'")
+    private LocalDateTime startDate;
+    @Column(columnDefinition = "timestamp null on update current_timestamp comment '종료일'")
+    private LocalDateTime endDate;*/
 
     public Todo(TodoDto.Request request) {
         this.todo = request.getTodo();
